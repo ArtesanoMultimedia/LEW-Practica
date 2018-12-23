@@ -1,0 +1,38 @@
+section#formulario-reserva
+
+  h1 Reserva online
+  
+  form(name="reserva" action="#" method="post")
+    
+    #div-nombre
+      label(for="nombre") Nombre:
+      input#nombre(type="text" name="nombre" placeholder="Nombre..." required)
+    
+    #div-apellidos
+      label(for="apellidos") Apellidos:
+      input#apellidos(type="text" name="apellidos" placeholder="Apellidos...")
+
+    #div-dni
+      label(for="dni") DNI/NIE:
+      input#dni(type="text" name="dni" placeholder="DNI..." maxlength="10" required)
+
+    #div-fecha
+      label(for="fecha") Fecha de reserva:
+      input#fecha(type="date" name="fecha" required)
+
+    #div-aviso
+      label ¿Quieres que te avisemos cuando esté disponible?
+      label #[input#aviso-si(type="radio", name="aviso" value="Sí")] Sí
+      label #[input#aviso-no(type="radio", name="aviso" value="No")] No
+
+    #div-recogida
+      label(for="recogida") Quiero recogerlo en la siguiente biblioteca:
+      select#recogida(name="recogida" required)
+        option(value="" disabled selected) Selecciona una biblioteca
+        option(value="biblioteca1") Buenaventura Durruti
+        option(value="biblioteca2") Francisco Ascaso
+        option(value="biblioteca3") García Oliver
+
+    #div-botones
+      input(type="submit", value="Enviar")
+      input(type="reset", value="Borrar")

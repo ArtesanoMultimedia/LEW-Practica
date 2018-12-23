@@ -1,0 +1,7 @@
+mixin colecciones(items)
+    each item in items
+        article.coleccion
+            img(src='images/col_' + item.col +'.jpg', alt=item.alt)
+            .texto
+                h1= item.titulo
+                p= item.parrafo

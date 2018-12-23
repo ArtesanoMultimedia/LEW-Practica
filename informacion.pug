@@ -1,0 +1,48 @@
+extends _layout
+
+block variables
+  - var titulo = 'Biblioteca ' + biblioteca + ' - Información de la biblioteca'
+  - var descripcion = 'Página de información de la biblioteca. Contiene una descripción de la biblioteca, los datos de contacto y el horario de apertura.'
+  - var h1 = 'Información'
+  - var ariadna = '<a href="index.html">Inicio</a> / Biblioteca'
+
+block contenido
+
+  article#informacion
+
+    section#descripcion
+      p La Biblioteca es un equipamiento cultural y de proximidad abierto a todos. Su oferta de servicios garantiza el acceso democrático a la información, la transmisión de conocimientos, la formación, la educación permanente, la autoformación y el ocio.
+      p La Biblioteca está situada en el interior de una isla de la Derecha del Eixample. Se accede por la calle de Girona, 64, a través de un pasaje y de un patio que constituye un oasis de tranquilidad en medio de la ciudad.
+      p La primera Biblioteca Sofia Barat abrió sus puertas el año 1971 en un espacio del Colegio Sagrado Corazón de la calle Diputació. La biblioteca prestó servicio público en esta ubicación hasta diciembre de 1999. En julio de 2000 se  inauguró la nueva biblioteca en el edificio actual, proyectado por la arquitecta Judith Massana.
+
+    section#otros-datos
+      table#horario
+        tr
+          th Días
+          th Horarios
+        tr
+          td Lunes y Viernes
+          td de 16:00h a 20:30h
+        tr
+          td Martes y miércoles
+          td de 10:00h a 14:00h y,
+            br
+            | de 16:00h a 20:30h
+        tr
+          td Jueves
+          td de 10:00h a 20:30h
+        tr
+          td Sábado
+          td de 10:00h a 14:00h
+
+      section#contacto
+        p Dirección: 
+          span C Girona, 64*68 LI
+        p Distrito: 
+          span Eixample
+        p Barrio: 
+          span La Derecha del Eixample
+        p Código postal: 
+          span 08009
+        p Población: 
+          span Barcelona

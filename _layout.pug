@@ -1,0 +1,34 @@
+- var biblioteca = "Carlos Rodríguez López"
+
+block variables
+
+include partials/mixins
+
+doctype html
+html(lang="es")
+
+  include partials/head
+
+  body
+
+    include partials/header
+
+    main
+      .contenedor
+
+        include partials/nav
+
+        if ariadna !== undefined
+          p.ariadna!= ariadna
+
+        h1#titulo-pagina!= h1
+
+        block contenido
+       
+
+    include partials/footer
+  
+    include partials/scripts
+
+    block scripts
+

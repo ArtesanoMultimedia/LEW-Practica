@@ -1,0 +1,36 @@
+extends _layout
+
+block variables
+  - var titulo = 'Biblioteca ' + biblioteca + ' - Colecciones'
+  - var descripcion = 'Página que muestra las colecciones disponibles en la biblioteca ' + biblioteca + '.'
+  - var h1 = 'Colecciones'
+  - var ariadna= '<a href="index.html">Inicio</a> / Colecciones'
+
+block contenido
+
+  section.colecciones
+    // Llamamos al mixin colecciones y le pasamos un array con los datos
+    +colecciones([{col: "1",
+                titulo: "Mujer",
+                alt: "Mujer leyendo sentada en el suelo de una biblioteca",
+                parrafo: "Fondo especializado que recoge y difunde todo tipo de información y documentación sobre diferentes ámbitos relacionados con la mujer."},
+                
+                {col: "2",
+                titulo: "Cocina",
+                alt: "Libro de rectas abierto sobre una encimera con algunos ingredientes",
+                parrafo: "Fondo especializado en cocina según alimentos, cocina de autor, cocina vegetariana y recetarios de nuestra tierra y del mundo, entre otras cosas."},
+                
+                {col: "3",
+                titulo: "Ciencia",
+                alt: "Cartel con la palabra Science sobre fondo de cielo",
+                parrafo: "Fondo especializado en libros y publicaciones científicas, tanto de la historia de la ciencia com de los avances actuales."},
+                
+                {col: "4",
+                titulo: "Literatura contemporánea",
+                alt: "Lomos de libros",
+                parrafo: "Fondo centrado en la literatura contemporánea de todos los países, especialmente literatura norteamericana."},
+                
+                {col: "5",
+                titulo: "Revistas y diarios",
+                alt: "Varias revistas a distintas alturas en un expositor",
+                parrafo: "Hemeroteca de revistas y diarios locales recogidos desde el año 1920. También recoge revistas de moda, fotografía, política, desde el año 1980. En la sala de la planta baja disponéis de una zona de lectura con las revistas y diarios más recientes."}])

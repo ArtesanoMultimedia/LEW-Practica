@@ -1,0 +1,49 @@
+extends _layout
+
+block variables
+  - var titulo = 'Biblioteca ' + biblioteca + ' - Página principal'
+  - var descripcion = 'Página principal de la Biblioteca ' + biblioteca + '.'
+  - var h1 = 'Novedades de otoño en la biblioteca: <a href="ficha.html">El ala izquierda.</a>'
+
+block contenido
+
+  article#noticia-destacada
+    a(href="ficha.html")
+      img(src="images/destacada.jpg", alt="Portada del libro El ala izquierda en color sobre fondo de libros abiertos en blanco y negro.")
+
+  section#noticias-secundarias
+
+    article
+      img(src="images/noticia_1.jpg" alt="Estanterías de una biblioteca.")
+      h1: a(href="colecciones.html") Colecciones.
+      h2 Novedades del catálogo.
+      p Consulta las colecciones de la biblioteca, están disponibles en la web. Además de ofrecerte un extenso catálogo, ahora tienes la posibilidad de reservar los libros online. Este otoño hemos ampliado las colecciones con nuevas adquisiciones.
+
+    article
+      img(src="images/noticia_2.jpg" alt="Foto antigua de mujeres científicas trabajando.")
+      h1: a(href="") Mujeres y ciencia.
+      h2 Conferencia.
+      p Con Sonia Estradé. Martes, 13 de noviembre, a las 19.00 h, en la Biblioteca Jaume Fuster 
+      p Sonia Estradé, licenciada en Física y doctora en Nanociencias por la UB
+      p En esta conferencia veremos qué hacen y dónde están las investigadoras de nuestro entorno, nos preguntaremos por sus trayectorias, y veremos ejemplos de mujeres científicas que deberíamos conocer.
+      p: span Colabora: 
+        a(href='http://www.ub.edu/laubdivulga/toctoc/') Universidad de Barcelona (proyecto TOC-TOC).
+
+    article
+      img(src="images/noticia_3.jpg" alt="Mujer manejando dos marionetas.")
+      h1: a(href="") El lobo cantor de los tres cerditos y Caperucita roja.
+      h2 Teatro infantil.
+      p Jueves 15 de noviembre a las 18 h. Area infantil. 
+      p Mercè, acompañada de la música del violín, nos introduce en el mundo de las frutas y las verduras. Nos explicará las maravillas de estos alimentos que nos ofrece la naturaleza. Con su cesta llena, aprovechará la fruta y verdura para contar un par de cuentos populares tradicionales. Este espectáculo es una audición de violín para niños donde pueden dejar volar la imaginación a través de la música y los cuentos y vivir en armonía.
+      p: span A cargo de: 
+        a(href='http://www.pengim-penjam.com') Cia. Pengim-Penjam. 
+      p: span Edad recomendada: a partir de 3 años
+
+    article
+      img(src="images/noticia_4.jpg" alt="Fotograma de Frankenstein con su novia.")
+      h1: a(href="") La novia de Frankenstein.
+      h2 Cine. Proyección.
+      p Viernes, 2 de noviembre, a las 20.30 h, en la Sala Joanot Martorell
+      p Proyección de la película La Novia de Frankenstein, de 1935, dirigida por James Whale. El director tuvo mucho éxito con Frankenstein, y realizó la secuela en esta película, con una mezcla de terror, ciencia ficción y humor. ¡Ven a pasar una tarde de terror en la biblioteca!
+      p: span Más información: 
+        a(href='https://en.wikipedia.org/wiki/Bride_of_Frankenstein') La novia de Frankenstein

@@ -397,7 +397,6 @@ input[type="search"].buscar-texto {
   justify-items: space-between;
   margin-top: 20px;
   padding: 2%;
-  ;
   background-color: $claro;
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
@@ -606,6 +605,7 @@ select {
   padding-left: 10px;
   height: 40px;
   color: $principal;
+  background-color: #fff;
   border: 2px solid $oscuro;
   &:focus {
     color: $resaltado;
@@ -669,17 +669,23 @@ th {
 =            4. =Responsive            =
 =============================================*/
 
+
+/*
 @media screen and (min-width: 900px) {
   .contenedor {
     width: 960px;
   }
 }
+*/
 
 @media screen and (max-width: 970px) {
   .contenedor {
     max-width: 960px;
   }
 }
+
+
+/* Hacemos más pequeño el logo poco a poco */
 
 @media screen and (max-width: 980px) {
   #logo {
@@ -809,20 +815,60 @@ th {
   .ficha {
     flex-direction: column;
     align-items: center;
+    section {
+      width: 90%;
+    }
   }
   #compartir ul {
     width: 50%;
   }
+  input[type="text"],
+  input[type="date"],
+  input[type="search"],
+  select {
+    width: 100%;
+    height: 40px;
+    color: $principal;
+    border: 2px solid $oscuro;
+    &:focus {
+      color: $resaltado;
+    }
+  }
   #formulario-reserva form {
     flex-direction: column;
-    flex-wrap: nowrap;
-    height: 400px;
-    align-items: center;
+    height: 500px;
+    padding: 15px;
+    //align-items: center;
+    width: 95%;
     div {
-      width: 90%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      label {
+        width: 100%;
+        display: block;
+      }
     }
     #div-botones {
-      margin-top: 30px;
+      margin-top: 10px;
+      height: 87px;
+      input {
+        width: 100%;
+        height: 40px;
+      }
+    }
+    .respuestas {
+      display: flex;
+      flex-direction: row;
+    }
+    #div-aviso label {
+      width: 50%;
+    }
+    #div-aviso>label:first-child {
+      width: 100%;
+    }
+    #div-recogida {
+      height: 80px;
     }
   }
   /* elementos informacion.html */

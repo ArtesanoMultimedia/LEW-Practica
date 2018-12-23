@@ -22,8 +22,9 @@ section#formulario-reserva
 
     #div-aviso
       label ¿Quieres que te avisemos cuando esté disponible?
-      label #[input#aviso-si(type="radio", name="aviso" value="Sí")] Sí
-      label #[input#aviso-no(type="radio", name="aviso" value="No")] No
+      .respuestas
+        label #[input#aviso-si(type="radio", name="aviso" value="Sí")] Sí
+        label #[input#aviso-no(type="radio", name="aviso" value="No")] No
 
     #div-recogida
       label(for="recogida") Quiero recogerlo en la siguiente biblioteca:

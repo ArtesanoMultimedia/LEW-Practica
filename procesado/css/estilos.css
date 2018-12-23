@@ -1,0 +1,953 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Asul|Chivo:900");
+#header .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header,
+main,
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/**
+ * Archivo fuente:       estilos.scss
+ * Descripción           Hoja de estilos de la web de la
+ *                       biblioteca
+ * Estudios:             Grado en Multimedia
+ * Asignatura:           Lenguajes y Estándares Web
+ * Proyecto:             Práctica
+ * author:               Carlos Rodríguez López
+ * email:                crodrigue1011@uoc.edu
+ * Profesor:             César Pablo Córcoles Briongos
+ * Profesor Colaborador: Carlos Salgado Werner
+ * 
+ */
+/* --------------------------------------------
+     CONTENIDO:
+      1. =Resets & General: body, p, a,...
+      2. =Elementos comunes
+        2.1. =Layout y estructura
+        2.2. =Encabezado
+          2.2.1. =Logo
+          2.2.2. =Login
+          2.2.3. =Buscar
+          2.2.4. =Menú cabecera
+          2.2.5. =Menú Principal
+        2.3. =Pie
+      3. =Elementos específicos
+        3.1.  =index
+        3.2.  =colecciones
+        3.3.  =ficha
+        3.4.  informacion
+      4. =Responsive
+---------------------------------------------*/
+/*=============================================
+=            1. =Resets & General             =
+=============================================*/
+html,
+body,
+ul,
+ol,
+li,
+input,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Asul", sans-serif;
+  color: #7a2800;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: #7a2800;
+  font-family: "Chivo", sans-serif;
+}
+
+a:hover {
+  color: #c95100;
+}
+
+.ariadna {
+  margin: 10px 0 0 20px;
+}
+
+#titulo-pagina {
+  margin: 20px 0 20px 20px;
+}
+
+/*=====  End of 1. =Resets & General   ======*/
+/*=============================================
+=            2. =Elementos comunes            =
+=============================================*/
+/*----------  2.1. =Layout y estructura  ----------*/
+/*----------  2.2. =Encabezado  ----------*/
+#header {
+  background-color: #ffc6aa;
+}
+
+#header-acciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+  /* Este estilo se aplica a login y a menu-cabecera*/
+}
+
+#header-acciones a {
+  font-family: "Asul", sans-serif;
+}
+
+#entrar-buscar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+/*-------------  2.2.1 =Logo  ----------*/
+#logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 51%;
+}
+
+#logo svg {
+  height: 100px;
+  width: 100px;
+  fill: #7a2800;
+}
+
+#logo p {
+  font-size: 2em;
+}
+
+#logo p a {
+  color: #7a2800;
+  text-decoration: none;
+}
+
+#logo p a:hover {
+  color: #c95100;
+}
+
+/* 
+/*----------  2.2.2. =Login  ----------*/
+#login {
+  padding: 10px;
+  margin-right: 10px;
+  width: 50px;
+  text-align: center;
+  color: #ffc6aa;
+  background-color: #2e0f00;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+#login:hover {
+  color: #c95100;
+}
+
+#login a {
+  font-family: "Asul", sans-serif;
+}
+
+/* 
+/*----------  2.2.3. =Buscar  ----------*/
+.buscar {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input[type="search"].buscar-texto {
+  padding-left: 10px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  color: #7a2800;
+  width: 80%;
+}
+
+input[type="search"].buscar-texto:focus {
+  color: #c95100;
+}
+
+.buscar-lupa {
+  background-color: #2e0f00;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  background-image: url("../images/icon_search.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 10px;
+}
+
+.buscar-lupa:hover {
+  background-image: url("../images/icon_search-resaltado.svg");
+}
+
+/* 
+/*----------  2.2.4. =Menús  ----------*/
+/* Aplicamos estilos comunes a ambos menús */
+#menu-cabecera,
+#menu-principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+}
+
+#menu-cabecera a,
+#menu-principal a {
+  text-decoration: none;
+}
+
+#menu-cabecera ul,
+#menu-principal ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu-cabecera li,
+#menu-principal li {
+  display: inline;
+  margin-left: 1em;
+}
+
+/**
+ * Aplicamos colores específicos al menú cabecera
+ * La fuente está definida en .header-acciones a
+ */
+#menu-cabecera a {
+  color: #661900;
+}
+
+#menu-cabecera a:hover {
+  color: #c95100;
+}
+
+/* Colores y otros estilos al menú principal */
+#menu-principal {
+  background-color: #2e0f00;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#menu-principal a {
+  color: #ffc6aa;
+  font-family: "Asul", sans-serif;
+}
+
+#menu-principal a:hover {
+  color: #c95100;
+}
+
+.hamburguesa {
+  display: none;
+}
+
+/* 
+/*----------  2.3. =Pie  ----------*/
+#footer {
+  background-color: #2e0f00;
+  font-size: 0.9em;
+}
+
+#footer .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+}
+
+#footer .contenedor ul {
+  height: 50%;
+  width: 50%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer a {
+  font-family: "Asul", sans-serif;
+  text-decoration: none;
+  color: #ffc6aa;
+}
+
+#footer a:hover {
+  color: #c95100;
+}
+
+/*
+/*=====  End of 2. =Elementos comunes  ======*/
+/*
+/*=============================================
+=            3. =Elementos específicos            =
+=============================================*/
+/*
+/* 
+/*----------  3.1. =index  ----------*/
+#noticia-destacada {
+  color: #7a2800;
+}
+
+#noticia-destacada img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+#noticias-secundarias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: space-between;
+  margin-top: 20px;
+  padding: 2%;
+  background-color: #ffc6aa;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#noticias-secundarias article {
+  width: 20%;
+  margin: 20px;
+}
+
+#noticias-secundarias article img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#noticias-secundarias article h1 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+#noticias-secundarias article h1 a {
+  text-decoration: none;
+}
+
+#noticias-secundarias article h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+#noticias-secundarias article p span {
+  font-size: 0.9em;
+}
+
+/* 
+/*----------  3.2. =colecciones  ----------*/
+.colecciones {
+  margin-bottom: 40px;
+  padding: 0 20px 0 20px;
+}
+
+.coleccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.coleccion img {
+  border-radius: 20px;
+  margin: 0 20px 20px 20px;
+}
+
+.coleccion h1 {
+  margin: 10px 0 10px 0;
+}
+
+/* 
+/*----------  3.3. =Ficha libro  ----------*/
+/* 
+/*----------  3.3.1. =info libro  ----------*/
+.ficha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.ficha img {
+  margin-right: 20px;
+}
+
+.ficha h1 {
+  font-family: "Chivo", sans-serif;
+  font-size: 2em;
+}
+
+.ficha h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.ficha ul.datos-tecnicos {
+  margin: 0 0 30px 30px;
+}
+
+.ficha h3 {
+  margin-bottom: 10px;
+}
+
+/* 
+/*----------  3.3.2. =Redes Sociales  ----------*/
+#compartir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#compartir ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  width: 50%;
+  height: 42px;
+}
+
+#compartir ul li,
+#compartir ul a {
+  height: 42px;
+  width: 42px;
+  display: block;
+}
+
+#facebook {
+  background: url("../images/sprite_icons.png") 0 0;
+}
+
+#facebook:hover {
+  background-position: 0 -53px;
+}
+
+#twitter {
+  background: url("../images/sprite_icons.png") -52px 0;
+}
+
+#twitter:hover {
+  background-position: -52px -53px;
+}
+
+#pinterest {
+  background: url("../images/sprite_icons.png") -105px 0;
+}
+
+#pinterest:hover {
+  background-position: -105px -53px;
+}
+
+#instagram {
+  background: url("../images/sprite_icons.png") -158px 0;
+}
+
+#instagram:hover {
+  background-position: -158px -53px;
+}
+
+/* 
+/*----------  3.3.3. =Formulario  ----------*/
+#formulario-reserva {
+  padding: 20px;
+}
+
+#formulario-reserva form {
+  background: #ffc6aa;
+  margin: 20px 0;
+  padding: 20px 40px 40px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 260px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#formulario-reserva form div {
+  height: 55px;
+  width: 49%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#formulario-reserva form div label {
+  display: inline-block;
+  width: 200px;
+  font-family: "Chivo", sans-serif;
+}
+
+#formulario-reserva form #div-botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#formulario-reserva form #div-botones input {
+  width: 49%;
+  height: 4em;
+}
+
+form,
+input,
+select,
+button {
+  border-radius: 20px;
+}
+
+#div-aviso label {
+  width: 50px;
+}
+
+#div-aviso label:first-child {
+  width: 100%;
+}
+
+form input[type="button"],
+form input[type="submit"],
+form input[type="reset"] {
+  padding: 10px;
+  color: #ffc6aa;
+  background-color: #2e0f00;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+}
+
+form input[type="button"]:hover,
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+  color: #c95100;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="search"],
+select {
+  width: 80%;
+  padding-left: 10px;
+  height: 40px;
+  color: #7a2800;
+  background-color: #fff;
+  border: 2px solid #2e0f00;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="search"]:focus,
+select:focus {
+  color: #c95100;
+}
+
+/* 
+/*----------  3.4. =informacion  ----------*/
+#informacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#descripcion,
+#otros-datos {
+  width: 50%;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+table,
+th,
+td {
+  border-bottom: 1px solid #7a2800;
+  padding: 10px;
+}
+
+th {
+  font-family: "Chivo", sans-serif;
+  background-color: #ffc6aa;
+}
+
+#horario {
+  width: 100%;
+}
+
+#contacto {
+  margin-top: 60px;
+}
+
+#contacto p {
+  font-family: "Chivo", sans-serif;
+  margin: 0;
+}
+
+#contacto p span {
+  font-family: "Asul", sans-serif;
+}
+
+/* 
+/*=====  End of 3. =Elementos específicos  ======*/
+/*
+/*=============================================
+=            4. =Responsive            =
+=============================================*/
+/*
+@media screen and (min-width: 900px) {
+  .contenedor {
+    width: 960px;
+  }
+}
+*/
+@media screen and (max-width: 970px) {
+  .contenedor {
+    max-width: 960px;
+  }
+}
+
+/* Hacemos más pequeño el logo poco a poco */
+@media screen and (max-width: 980px) {
+  #logo {
+    width: 50%;
+  }
+  #logo p {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #logo p {
+    font-size: 1.5em;
+  }
+}
+
+/* Aquí empezarían los estilos específicos del Bonus */
+@media screen and (max-width: 550px) {
+  #header .contenedor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    width: 100%;
+  }
+  #logo {
+    width: 100%;
+  }
+  #header-acciones {
+    width: 100%;
+  }
+  #entrar-buscar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  #login {
+    width: 86px;
+  }
+  .buscar {
+    margin-top: 5px;
+  }
+  input[type="search"].buscar-texto {
+    width: 100%;
+  }
+  #menu-cabecera li,
+  #menu-principal li {
+    display: inherit;
+    margin-left: 0;
+  }
+  #menu-cabecera {
+    height: auto;
+    width: 100%;
+  }
+  #menu-cabecera ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  #menu-cabecera ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    line-height: 2em;
+  }
+  #menu-principal {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #menu-principal .open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #menu-principal ul {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: none;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #menu-principal ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    line-height: 3em;
+    width: 100%;
+  }
+  .hamburguesa {
+    display: initial;
+    color: #ffc6aa;
+    background-color: #2e0f00;
+    border-radius: 20px;
+    padding: 10px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 10px 10px 0 0;
+    position: relative;
+    top: -30px;
+  }
+  .hamburguesa.open i {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .hamburguesa i {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .ariadna {
+    display: none;
+  }
+  #footer .contenedor {
+    height: 480px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #footer .contenedor ul {
+    height: 30%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /* elementos index.html */
+  #noticias-secundarias {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #noticias-secundarias > article {
+    width: 90%;
+  }
+  #noticias-secundarias > article img {
+    width: 50%;
+  }
+  /* elemenentos ficha.html */
+  .ficha {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ficha section {
+    width: 90%;
+  }
+  #compartir ul {
+    width: 50%;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="search"],
+  select {
+    width: 100%;
+    height: 40px;
+    color: #7a2800;
+    border: 2px solid #2e0f00;
+  }
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="search"]:focus,
+  select:focus {
+    color: #c95100;
+  }
+  #formulario-reserva form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 500px;
+    padding: 15px;
+    width: 95%;
+  }
+  #formulario-reserva form div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #formulario-reserva form div label {
+    width: 100%;
+    display: block;
+  }
+  #formulario-reserva form #div-botones {
+    margin-top: 10px;
+    height: 87px;
+  }
+  #formulario-reserva form #div-botones input {
+    width: 100%;
+    height: 40px;
+  }
+  #formulario-reserva form .respuestas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #formulario-reserva form #div-aviso label {
+    width: 50%;
+  }
+  #formulario-reserva form #div-aviso > label:first-child {
+    width: 100%;
+  }
+  #formulario-reserva form #div-recogida {
+    height: 80px;
+  }
+  /* elementos informacion.html */
+  #informacion {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #descripcion,
+  #otros-datos {
+    width: 90%;
+  }
+}

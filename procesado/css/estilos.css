@@ -413,8 +413,6 @@ input[type="search"].buscar-texto:focus {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .coleccion img {
@@ -683,13 +681,12 @@ th {
 /*=============================================
 =            4. =Responsive            =
 =============================================*/
-/*
 @media screen and (min-width: 900px) {
   .contenedor {
     width: 960px;
   }
 }
-*/
+
 @media screen and (max-width: 970px) {
   .contenedor {
     max-width: 960px;
@@ -802,8 +799,15 @@ th {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     line-height: 3em;
     width: 100%;
+  }
+  #menu-principal ul li a {
+    width: 100%;
+    text-align: center;
   }
   .hamburguesa {
     display: initial;
@@ -858,6 +862,16 @@ th {
   }
   #noticias-secundarias > article img {
     width: 50%;
+  }
+  /* elementos colecciones.html */
+  .coleccion {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .coleccion img {
+    width: 33%;
+    margin-top: 10px;
   }
   /* elemenentos ficha.html */
   .ficha {

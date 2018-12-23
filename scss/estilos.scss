@@ -438,7 +438,7 @@ input[type="search"].buscar-texto {
 .coleccion {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   img {
     border-radius: $radius;
     margin: 0 20px 20px 20px;
@@ -669,14 +669,11 @@ th {
 =            4. =Responsive            =
 =============================================*/
 
-
-/*
 @media screen and (min-width: 900px) {
   .contenedor {
     width: 960px;
   }
 }
-*/
 
 @media screen and (max-width: 970px) {
   .contenedor {
@@ -765,8 +762,13 @@ th {
       li {
         display: flex;
         justify-content: center;
+        align-items: center;
         line-height: 3em;
         width: 100%;
+        a {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }
@@ -809,6 +811,14 @@ th {
     width: 90%;
     img {
       width: 50%;
+    }
+  }
+  /* elementos colecciones.html */
+  .coleccion {
+    align-items: flex-start;
+    img {
+      width: 33%;
+      margin-top: 10px;
     }
   }
   /* elemenentos ficha.html */
